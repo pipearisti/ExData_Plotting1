@@ -39,7 +39,7 @@ lines(dt, dat$Sub_metering_1, col = "black")
 lines(dt, dat$Sub_metering_2, col = "red")
 lines(dt, dat$Sub_metering_3, col = "blue")
 legend("topright", names(dat[7:9]), lwd = 1, 
-       col = c("black", "red", "blue") , border = NA)
+       col = c("black", "red", "blue") , box.col = NA)
 
 ## Plot (2,2): Global Reactive Power
 plot(dt, dat$Global_reactive_power, type="l", 
