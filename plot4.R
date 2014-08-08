@@ -1,4 +1,4 @@
-## plot3.R: Reproduce Plot 3
+## plot4.R: Reproduce Plot 4
 
 ## Felipe Aristizabal
 ## coursera: Exploratory Data Analysis
