@@ -17,6 +17,7 @@ dt <- strptime(paste(dat$Date, dat$Time), format="%d/%m/%Y %H:%M:%S")
 
 ## Line plot -> directly to png
 png(filename="plot3.png", height = 480, width = 480)
+par(bg = NA)
 plot(dt, dat$Global_active_power, type="n", 
 	xlab = "", 
 	ylab = "Energy sub metering", 
