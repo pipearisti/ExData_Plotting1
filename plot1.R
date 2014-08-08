@@ -20,6 +20,7 @@ dt <- strptime(paste(dat$Date, dat$Time), format="%d/%m/%Y %H:%M:%S")
 
 ## Histogram -> directly to png
 png(filename="plot1.png", height = 480, width = 480)
+par(bg = NA)
 hist(dat$Global_active_power, col = "red",
 	main = "Global Active Power",
 	xlab = "Global Active Power (kilowatts)")
