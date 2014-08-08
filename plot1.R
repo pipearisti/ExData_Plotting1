@@ -8,10 +8,10 @@
 
 rm(list=ls())
 
-## Read data from: ../data/household_power_consumption.txt
-dat <- read.delim("../data/household_power_consumption.txt", sep=";",  nrows=69516, na.strings="?")
+## Read directly form zip: exdata-data-household_power_consumption.zip
+con <- unz("exdata-data-household_power_consumption.zip", "household_power_consumption.txt")
+dat <- read.delim(con,	sep=";",  nrows=69517, na.strings="?")
 sel <- as.Date(dat$Date, "%d/%m/%Y") >= as.Date("2007-02-01")
-
 dat <- dat[sel,]
 
 ## Convert to Date/Time
