@@ -18,13 +18,10 @@ dat <- dat[sel,]
 dt <- strptime(paste(dat$Date, dat$Time), format="%d/%m/%Y %H:%M:%S")
 
 
-## Histogram
+## Histogram -> directly to png
+png(filename="plot1.png", height = 480, width = 480)
 hist(dat$Global_active_power, col = "red",
 	main = "Global Active Power",
 	xlab = "Global Active Power (kilowatts)")
-
-## Generate PNG file
-dev.copy(png, filename="plot1.png", height = 480, width = 480)
 dev.off()					## Write PNG image and close file
 
-dev.off()					## Close figure (screen)
